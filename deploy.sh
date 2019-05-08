@@ -15,9 +15,9 @@ svn_with_auth() {
 
 echo "Deploying website and docs to $svn_url"
 cd ..
-svn_with_auth checkout $svn_url cordova-website
+svn checkout $svn_url cordova-website
 cp -R cordova-docs/build-prod/. cordova-website/public/
 cd cordova-website
 svn status | grep "?"
 svn add --force .
-svn_with_auth commit -m "Updated docs"
+#svn_with_auth commit -m "Updated docs"
