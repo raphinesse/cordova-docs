@@ -8,7 +8,7 @@ install:
   - bundle install
 
 before_deploy:
-  - travis_wait 30 npm run build
+  - touch mkdir -p build-prod && build-prod/fake.file
 
 deploy:
   provider: script
